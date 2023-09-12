@@ -1,3 +1,8 @@
+
+# Langebrød
+
+## Ingredienser
+
 - 11dl vann (romtemp)
 - 100g gjær, eller 2pk tørrgjær
 - 30g salt
@@ -5,6 +10,8 @@
 - 100g margarin
 - 800g finsiktet rugmel
 - 1000g siktet hvetemel
+
+## Metode
 
 Hvile i 30 minutter på et lunt sted, tildekket med plast.
 
