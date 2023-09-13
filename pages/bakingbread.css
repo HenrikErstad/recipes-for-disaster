@@ -1,0 +1,46 @@
+body {
+    font-family: 'Open Sans', Roboto, sans-serif;
+    font-size: 16px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.recipe-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+
+    & > li {
+        margin-bottom: 1rem;
+
+        & > a {
+            text-transform: capitalize;
+            display: block;
+            padding: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            color: #000;
+
+            &:hover {
+                background-color: #eee;
+            }
+        }
+    }
+}
