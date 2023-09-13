@@ -61,6 +61,9 @@ async function createRecipeListMenu() {
 }
 
 document.addEventListener("DOMContentLoaded", createRecipeOverviewPage);
+
+// Screen lock to prevent screen from turning off
+// automatically released when the page is hidden
 document.addEventListener('visibilitychange', async () => {
   if (screenLock !== null && document.visibilityState === 'visible') {
     screenLock = await navigator.wakeLock.request('screen');
