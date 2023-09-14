@@ -9,7 +9,6 @@ export function makeApiUrl(endpoint) {
 }
 
 export async function grabRecipeFileContents(recipeName) {
-    // HenrikErstad/recipes-for-disaster/main/recipes/longbread/recipe.md
     const url = `${RAW_DATA_URL}/${REPO_OWNER}/${REPO_NAME}/main/recipes/${recipeName}/recipe.md`;
     const response = await fetch(url);
     return await response.text();

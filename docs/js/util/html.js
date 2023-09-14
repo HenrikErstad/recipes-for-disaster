@@ -36,3 +36,10 @@ export function setPageTitle(title = undefined) {
     document.title = title + PAGE_TITLE_DELIMITER + PAGE_TITLE_SUFFIX;
   }
 }
+
+export function createFragment(content) {
+  const fragment = document.createElement("div");
+  fragment.innerHTML = content;
+
+  return fragment;
+}

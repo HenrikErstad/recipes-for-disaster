@@ -21,7 +21,8 @@ async function createRecipeListMenu() {
   const recipes = await response.json();
 
   recipes.forEach((recipe) => {
-    const anchor = createAnchor(recipe.name, "/" + recipe.name);
+    const url = "./" + recipe.name;
+    const anchor = createAnchor(recipe.name, url);
 
     const listItem = document.createElement("li");
     listItem.appendChild(anchor);

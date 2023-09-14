@@ -1,23 +1,17 @@
-function handleRecipeClick(event, recipeName) {
-    event.preventDefault();
-    resetPage();
+import { grabRecipeFileContents } from "../util/api.js";
+import { parseMarkdown } from "../util/parseMd.js";
+import { renderPageContent, createAnchor, setPageTitle, createFragment } from "../util/html.js";
+
+export async function RecipeDetailsPage(recipeName) {
+  // fetch the file from the API
+  const rawFile = await grabRecipeFileContents(recipeName);
+  const htmlFromMd = await parseMarkdown(rawFile);
+  const htmlFromMdFragment = createFragment(htmlFromMd);
   
-    createRecipeDetailsPage(recipeName);
-  }
-  
-  async function createRecipeDetailsPage(recipeName) {
-    // fetch the file from the API
-    const rawFile = await grabRecipeFileContents(recipeName);
-    const htmlFromMd = await parseMarkdown(rawFile);
-    
-    PAGE_ROOT.innerHTML = htmlFromMd;
-    PAGE_ROOT.appendChild(createBackButton());
-  }
-  
-  function createBackButton() {
-    return createAnchor("Tilbake", "", (event) => {
-      event.preventDefault();
-      resetPage();
-    //   createRecipeOverviewPage();
-    });
-  }
+  setPageTitle(recipeName);
+  renderPageContent([htmlFromMdFragment, createBackButton()]);
+}
+
+function createBackButton() {
+  return createAnchor("Tilbake", "./");
+}
