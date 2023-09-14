@@ -1,5 +1,5 @@
 import { grabRecipeFileContents } from "../util/api.js";
-import { parseMarkdown } from "../util/parseMd.js";
+import { extractPageTitle, parseMarkdown } from "../util/parseMd.js";
 import {
   renderPageContent,
   createBackButton,
@@ -17,7 +17,8 @@ export async function RecipeDetailsPage(recipeName) {
 
   const htmlFromMd = await parseMarkdown(rawFile);
   const htmlFromMdFragment = createFragment(htmlFromMd);
+  const pageTitle = extractPageTitle(rawFile);
 
-  setPageTitle(recipeName);
+  setPageTitle(pageTitle);
   renderPageContent([htmlFromMdFragment, createBackButton()]);
 }

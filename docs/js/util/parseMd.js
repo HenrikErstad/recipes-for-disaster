@@ -19,3 +19,8 @@ export function parseMarkdown(markdown) {
 
   return markdown;
 }
+
+export function extractPageTitle(markdown) {
+  const title = markdown.match(/# (.*)/);
+  return title ? title[1] : null;
+}

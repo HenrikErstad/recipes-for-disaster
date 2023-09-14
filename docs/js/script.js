@@ -18,7 +18,7 @@ async function handleRouteChange(url) {
       await RecipeDetailsPage(path);
       return;
     } catch (error) {
-      console.error(error);
+      // console.error(error);
     }
   }
 
