@@ -2,9 +2,12 @@ import { renderPageContent, createBackButton, setPageTitle,  } from "../util/htm
 
 export async function NotFoundPage() {
   const title = document.createElement("h1");
-  title.textContent = "Kunne ikke finne siden du lette etter";
+  title.textContent = "404";
 
-  setPageTitle("404", "Fant ikke siden");
-  renderPageContent([title, createBackButton()]);
+  const text = document.createElement("p");
+  text.textContent = "Fant ikke oppskriften du lette etter.";
+
+  setPageTitle("404", "Fant ikke oppskriften");
+  renderPageContent([title, text, createBackButton()]);
 }
 

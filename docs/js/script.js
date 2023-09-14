@@ -2,25 +2,26 @@ import { NotFoundPage } from "./pages/404.js";
 import { RecipeOverviewPage } from "./pages/index.js";
 import { RecipeDetailsPage } from "./pages/recipe.js";
 
-function handleRouteChange(url) {
+async function handleRouteChange(url) {
   // determine where we are
   const path = url.split("/").pop();
-  const hasSuffix = path.includes(".");
-
+  
   if (path === "/" || path === "" || path === "index.html") {
     RecipeOverviewPage();
     return;
   }
+  
+  const hasIllegalSymbols = path.match(/[^a-z0-9-]/g) !== null;
 
-  if (!hasSuffix) {
+  if (!hasIllegalSymbols) {
     try {
-      RecipeDetailsPage(path);
+      await RecipeDetailsPage(path);
       return;
     } catch (error) {
       console.error(error);
     }
   }
-  
+
   NotFoundPage();
 }
 
