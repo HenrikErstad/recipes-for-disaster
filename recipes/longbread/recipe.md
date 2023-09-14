@@ -22,6 +22,6 @@ Stekes gylne, ca 45 minutter.
 ## Alternativ metode
 
 Bland 500g av hvetemelet med 500ml romtemperert vann og ca 0.5g tørrgjær (fjerdedels teskje) i en boks med tett lokk og som kan romme minst 1 liter. Settes i romtemperatur i 6-8 timer.
-Når denne er ferdig blandes den med resten av melet med salt og sirup. Tilfør resten av vannet litt og litt. Når alt er eltet sammen til en jevn og smidig deig. Da eltes smøret inn. Hev til dobbel størrelse, ca 1-2 timer.
+Når denne er ferdig blandes den med resten av melet med salt og sirup. Tilfør resten av vannet litt og litt. Elt sammen til en jevn og smidig deig. Da eltes smøret inn. Hev til dobbel størrelse, ca 1-2 timer.
 Del deigen i fire og form til brød. La heve til omtrent dobbel størrelse, ca 1-2 timer.
 Stekes som anvist over.
