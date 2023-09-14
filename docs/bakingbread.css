@@ -1,73 +1,101 @@
 body {
-    font-family: 'Open Sans', Roboto, sans-serif;
-    font-size: 16px;
+  font-family: "Open Sans", Roboto, sans-serif;
+  font-size: 16px;
 }
 
 h1 {
-    font-size: 2rem;
-    font-weight: 700;
-    margin: 0;
-    text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0;
+  text-transform: uppercase;
 }
 
 h1::first-letter {
-    font-size: 3rem;
+  font-size: 3rem;
 }
 
 h2 {
-    font-size: 1.2rem;
-    font-weight: 700;
-    margin-top: 1.5rem;
-    margin-bottom: 0;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-top: 1.5rem;
+  margin-bottom: 0;
 }
 
-main {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 1rem;
+main,
+footer {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1rem;
 }
 
 ul {
-    padding: 0;
-    margin-left: 1rem;
-    margin-top: 0.2rem;
+  padding: 0;
+  margin-left: 1rem;
+  margin-top: 0.2rem;
 }
 
 p {
-    margin-top: 0.5rem;
-    margin-bottom: 1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 .recipe-list {
-    list-style-type: none;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  margin-top: 0.5rem;
+
+  & > li {
     padding: 0;
-    margin: 0;
-    margin-top: 0.5rem;
+    margin-bottom: 0.2rem;
 
-    & > li {
-        padding: 0;
-        margin-bottom: 0.2rem;
-
-        &::before {
-            content: "\27A4";
-            margin-right: 0.5rem;
-        }
-
-        & > a {
-            text-transform: capitalize;
-            display: inline-block;
-            text-decoration: none;
-            color: #000;
-            padding-top: 0.5rem;
-            padding-bottom: 0.5rem;
-
-            &:hover {
-                text-decoration: underline;
-            }
-
-            &:visited {
-                color: #6d6d6d;
-            }
-        }
+    &::before {
+      content: "\27A4";
+      margin-right: 0.5rem;
     }
+
+    & > a {
+      text-transform: capitalize;
+      display: inline-block;
+      text-decoration: none;
+      color: #000;
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+
+      &:hover {
+        text-decoration: underline;
+      }
+
+      &:visited {
+        color: #6d6d6d;
+      }
+    }
+  }
+}
+
+footer {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+
+  & > a {
+    text-decoration: none;
+    color: #000;
+
+    display: flex;
+    align-items: center;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    &:visited {
+      color: #6d6d6d;
+    }
+
+    & > img {
+      height: 2rem;
+      margin-right: 0.5rem;
+    }
+  }
 }
