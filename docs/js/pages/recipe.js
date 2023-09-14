@@ -1,6 +1,6 @@
 import { grabRecipeFileContents } from "../util/api.js";
 import { parseMarkdown } from "../util/parseMd.js";
-import { renderPageContent, createAnchor, setPageTitle, createFragment } from "../util/html.js";
+import { renderPageContent, createBackButton, setPageTitle, createFragment } from "../util/html.js";
 
 export async function RecipeDetailsPage(recipeName) {
   // fetch the file from the API
@@ -12,6 +12,3 @@ export async function RecipeDetailsPage(recipeName) {
   renderPageContent([htmlFromMdFragment, createBackButton()]);
 }
 
-function createBackButton() {
-  return createAnchor("Tilbake", "./");
-}

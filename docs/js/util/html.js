@@ -43,3 +43,7 @@ export function createFragment(content) {
 
   return fragment;
 }
+
+export function createBackButton() {
+  return createAnchor("Tilbake", "./");
+}
