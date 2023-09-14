@@ -15,7 +15,7 @@
 
 Sukker/margarin røres hvitt. Eggeplommene tilsettes. Så halvsmeltet kokesjokolade.
 Tilslutt siktes mel/melk vekselvis inn i deigen sammen med bakepulver.
-Eggehviten stivpiskes og haes i.
+Eggehviten stivpiskes og vendes inn.
 Steking: 180 – 200°C i 45 min.
 
 ## Krem
