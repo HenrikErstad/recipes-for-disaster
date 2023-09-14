@@ -64,6 +64,10 @@ p {
             &:hover {
                 text-decoration: underline;
             }
+
+            &:visited {
+                color: #6d6d6d;
+            }
         }
     }
 }
