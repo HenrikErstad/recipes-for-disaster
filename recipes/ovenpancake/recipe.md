@@ -14,11 +14,8 @@ Også kalt "Svensk Omelett"
 
 ## Metode
 
-Forvarm ovnen til ca 200° C
-Skjær opp bacon i serveringsstykker og legg på rist over langpanne.
-Sett i ovnen, så sørger den for stekingen mens du:
-lager pannekakerøren
-legg det ferdigstekte baconet legges ned i langpannen
-hell røren over
-Dette skal steike i ovnen til ovnsomeletten har fått en fin gylden farge – og har hevd seg i bølger og daler som et landskap.
-Dersom den ikke oppfører seg slik, prøve med flere egg, eller tynnere røre!
+Forvarm ovnen til ca 200° C.
+Skjær opp bacon i serveringsstykker og legg på rist over langpanne. Stek i ovnen (gjerne på varmluft) 8-10 min.
+Bland mel, sukker og melk til en slag tjukk og klumpefri pannekakerøre. Tilsett melken litt etter litt for å unngå klumper. Til slutt vendes eggene inn.
+Fordel det ferdigstekte baconet i langpannen og hell røren over.
+Stek i ovnen til ovnsomeletten har fått en fin gylden farge – og har hevd seg i bølger og daler som et landskap. Ca 20-25 min.
