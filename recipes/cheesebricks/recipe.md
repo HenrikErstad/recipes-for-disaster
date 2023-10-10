@@ -23,3 +23,5 @@ Dekk bollen med plastfolie og la den heve til dobbel størrelse.
 Etter at deigen er ferdig hevet kjevles den til et rektangel som er cirka 1 centimeter tykt. Legg rektangelet over på et bakepapirkledd stekebrett. Hvis deigen krymper sammen når den flyttes over på bakepapiret, kan den kjevles flat igjen på bakepapiret. Bruk en skarp kniv og del deigen opp i 16 ruter. Rutene skal ikke flyttes, de skal ligge på samme brett og heve inn i hverandre. Dekk rutene med plastfolie eller et kjøkkenhåndklede og la de etterheve i 25 minutter.
 Pensle rutene med et sammenvispet egg. Strø over litt revet ost.
 Stekes midt i ovnen på 225 grader over/undervarme i cirka 12 minutter, til briksene er gyldne.
+
+Basert på [Ostebriks fra NRK](https://www.nrk.no/mat/1.14953173)
