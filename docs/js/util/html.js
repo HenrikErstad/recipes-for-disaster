@@ -18,6 +18,24 @@ export function resetPage() {
   PAGE_ROOT.innerHTML = "";
 }
 
+function renderFooter() {
+  document.body.innerHTML += `
+  <footer>
+  <a
+    href="https://github.com/HenrikErstad/recipes-for-disaster"
+    aria-label="GitHub repository"
+    target="_blank"
+    rel="noopener"
+    ><img src="github-mark.svg" alt="A picture of the GitHub Invertocat" />Henrik Erstad</a
+  >
+  |
+  <a
+    href="https://github.com/HenrikErstad/recipes-for-disaster/blob/main/LICENSE"
+    >Lisens</a
+  >
+</footer>`;
+}
+
 export function renderPageContent(content) {
   // check if content is an array
   if (Array.isArray(content)) {
@@ -25,6 +43,8 @@ export function renderPageContent(content) {
   } else {
     PAGE_ROOT.innerHTML = content;
   }
+
+  renderFooter();
 }
 
 export function setPageTitle(title = undefined) {
