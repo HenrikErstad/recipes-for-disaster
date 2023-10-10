@@ -15,7 +15,12 @@ export function parseMarkdown(markdown) {
 
   // assume all remaining lines containing text are paragraphs
   markdown = markdown.replaceAll(/^(?!\n)[\n]?([^\n<]+)/gm, "<p>$1</p>");
-  // ^[\n]?([^\n<]*(?=\n))
+
+  // convert links to anchor tags
+  markdown = markdown.replaceAll(
+    /\[([^\]]+)\]\(([^)]+)\)/gm,
+    '<a href="$2" target="_blank">$1</a>'
+  );
 
   return markdown;
 }
