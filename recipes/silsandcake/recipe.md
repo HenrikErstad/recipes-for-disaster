@@ -3,12 +3,12 @@
 
 ## Ingredienser
 
-- 2.5 kopp sukker
+- 6dl sukker
 - 150g margarin
 - 3 egg
 - 100g mørk kokesjokolade
 - 2.5dl melk
-- 3.5 kopp hvetemel
+- 8.25dl hvetemel
 - 3ts bakepulver
 
 ## Metode
@@ -16,7 +16,7 @@
 Sukker/margarin røres hvitt. Eggeplommene tilsettes. Så halvsmeltet kokesjokolade.
 Tilslutt siktes mel/melk vekselvis inn i deigen sammen med bakepulver.
 Eggehviten stivpiskes og vendes inn.
-Steking: 180 – 200°C i 45 min.
+Steking: 180°C i 45-60 min.
 
 ## Krem
 - ½ - 1 plate sjokolade
