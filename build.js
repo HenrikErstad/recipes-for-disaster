@@ -19,6 +19,10 @@ function parseMarkdown(markdown) {
     /\[([^\]]+)\]\(([^)]+)\)/gm,
     '<a href="$2" target="_blank">$1</a>'
   );
+  // remove empty tags
+  markdown = markdown.replaceAll(/<(\w+)>\s*<\/\1>/g, "");
+  // remove line breaks following headings
+  markdown = markdown.replaceAll(/(<\/h[1-6]>)\s*<br \/>/g, "$1");
   return markdown;
 }
 
