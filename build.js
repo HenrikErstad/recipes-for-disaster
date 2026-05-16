@@ -65,6 +65,8 @@ function buildRecipePages() {
     .filter((d) => d.isDirectory())
     .map((d) => d.name);
 
+  const recipes = [];
+
   for (const recipeName of recipeDirs) {
     const mdPath = path.join(RECIPES_DIR, recipeName, "recipe.md");
     const markdown = fs.readFileSync(mdPath, "utf-8");
@@ -85,15 +87,16 @@ function buildRecipePages() {
       })
     );
 
+    recipes.push({ dir: recipeName, title: pageTitle || recipeName });
     console.log(`Built: ${recipeName}/index.html`);
   }
 
-  return recipeDirs;
+  return recipes;
 }
 
-function buildIndexPage(recipeDirs) {
-  const listItems = recipeDirs
-    .map((name) => `        <li><a href="./${name}/">${name}</a></li>`)
+function buildIndexPage(recipes) {
+  const listItems = recipes
+    .map((r) => `        <li><a href="./${r.dir}/">${r.title}</a></li>`)
     .join("\n");
 
   const body = `      <h1>Luddig</h1>
@@ -132,8 +135,8 @@ function build404Page() {
   console.log("Built: 404.html");
 }
 
-const recipeDirs = buildRecipePages();
-buildIndexPage(recipeDirs);
+const recipes = buildRecipePages();
+buildIndexPage(recipes);
 build404Page();
 
 console.log("Done!");
