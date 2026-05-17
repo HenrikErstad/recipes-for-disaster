@@ -5,13 +5,14 @@ const RECIPES_DIR = path.join(__dirname, "recipes");
 const DOCS_DIR = path.join(__dirname, "docs");
 
 function parseMarkdown(markdown) {
+  markdown = markdown.replaceAll("\r\n", "\n");
   markdown = markdown.replaceAll(/^\n?# (.*)\n?$/gm, "<h1>$1</h1>");
   markdown = markdown.replaceAll(/^\n?## (.*)\n?$/gm, "<h2>$1</h2>");
   markdown = markdown.replaceAll(/^\n?### (.*)\n?$/gm, "<h3>$1</h3>");
   markdown = markdown.replaceAll(/^- (.*)$/gm, "<li>$1</li>");
   markdown = markdown.replaceAll(
-    /(<li>.*?<\/li>)(?!\n<li>)/gs,
-    "<ul>$1</ul>"
+    /(<li>.*<\/li>\n?)+/g,
+    "<ul>$&</ul>"
   );
   markdown = markdown.replaceAll(/\s\s\n/gm, "<br />");
   markdown = markdown.replaceAll(/^(?!\n)[\n]?([^\n<]+)/gm, "<p>$1</p>");
