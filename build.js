@@ -140,8 +140,50 @@ function build404Page() {
   console.log("Built: 404.html");
 }
 
+function getLastModified(filePath) {
+  const { execSync } = require("child_process");
+  const date = execSync(`git log -1 --format="%aI" -- "${filePath}"`, {
+    encoding: "utf-8",
+  }).trim();
+  return date ? date.split("T")[0] : new Date().toISOString().split("T")[0];
+}
+
+function buildSitemap(recipes) {
+  const baseUrl = "https://oppskrift.luddig.com";
+
+  const recipeDates = recipes.map((r) => ({
+    loc: baseUrl + "/" + r.dir + "/",
+    lastmod: getLastModified(path.join("recipes", r.dir, "recipe.md")),
+    priority: "0.8",
+  }));
+
+  const latestDate = recipeDates.reduce(
+    (max, r) => (r.lastmod > max ? r.lastmod : max),
+    recipeDates[0].lastmod
+  );
+
+  const urls = [
+    { loc: baseUrl + "/", lastmod: latestDate, priority: "1.0" },
+    ...recipeDates,
+  ];
+
+  const xml = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${urls.map((u) => `  <url>
+    <loc>${u.loc}</loc>
+    <lastmod>${u.lastmod}</lastmod>
+    <priority>${u.priority}</priority>
+  </url>`).join("\n")}
+</urlset>
+`;
+
+  fs.writeFileSync(path.join(DOCS_DIR, "sitemap.xml"), xml);
+  console.log("Built: sitemap.xml");
+}
+
 const recipes = buildRecipePages();
 buildIndexPage(recipes);
 build404Page();
+buildSitemap(recipes);
 
 console.log("Done!");
